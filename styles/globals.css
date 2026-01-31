@@ -1,0 +1,48 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 30 20% 97%;
+  --foreground: 222 22% 15%;
+  --card: 30 30% 99%;
+  --card-foreground: 222 22% 15%;
+  --primary: 207 78% 40%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 188 35% 90%;
+  --secondary-foreground: 222 22% 20%;
+  --muted: 32 18% 92%;
+  --muted-foreground: 215 20% 35%;
+  --accent: 18 80% 85%;
+  --accent-foreground: 222 22% 15%;
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 20 10% 85%;
+  --input: 20 10% 85%;
+  --ring: 207 78% 40%;
+  --radius: 0.9rem;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+  background-image: radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 55%),
+    radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.08), transparent 50%);
+}
+
+* {
+  @apply border-border;
+}
+
+.glass-panel {
+  @apply rounded-xl border border-white/40 bg-white/70 shadow-xl backdrop-blur;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.2);
+  border-radius: 9999px;
+}
